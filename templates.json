@@ -1,0 +1,63 @@
+[
+  {
+    "key": "paper-unified-build",
+    "gameFamily": "minecraft/vanilla/paper",
+    "name": "Paper (Unified Build)",
+    "sourceType": "github",
+    "imageRef": "",
+    "sourceRepoUrl": "https://github.com/REPLACE_ME/server-template-catalog.git",
+    "sourceRepoRef": "main",
+    "requiresStorage": true,
+    "defaultStorageMountPath": "/data",
+    "defaultStorageMode": "rw",
+    "defaultGamePort": 25565,
+    "defaultProtocol": "tcp",
+    "defaultEnvJson": "{\"GAME_TYPE\":\"paper\",\"EULA\":\"TRUE\",\"ENABLE_ROLLING_LOGS\":\"true\"}"
+  },
+  {
+    "key": "spigot-unified-build",
+    "gameFamily": "minecraft/vanilla/spigot",
+    "name": "Spigot (Unified Build)",
+    "sourceType": "github",
+    "imageRef": "",
+    "sourceRepoUrl": "https://github.com/REPLACE_ME/server-template-catalog.git",
+    "sourceRepoRef": "main",
+    "requiresStorage": true,
+    "defaultStorageMountPath": "/data",
+    "defaultStorageMode": "rw",
+    "defaultGamePort": 25565,
+    "defaultProtocol": "tcp",
+    "defaultEnvJson": "{\"GAME_TYPE\":\"spigot\",\"EULA\":\"TRUE\",\"ENABLE_ROLLING_LOGS\":\"true\"}"
+  },
+  {
+    "key": "purpur-unified-build",
+    "gameFamily": "minecraft/vanilla/purpur",
+    "name": "Purpur (Unified Build)",
+    "sourceType": "github",
+    "imageRef": "",
+    "sourceRepoUrl": "https://github.com/REPLACE_ME/server-template-catalog.git",
+    "sourceRepoRef": "main",
+    "requiresStorage": true,
+    "defaultStorageMountPath": "/data",
+    "defaultStorageMode": "rw",
+    "defaultGamePort": 25565,
+    "defaultProtocol": "tcp",
+    "defaultEnvJson": "{\"GAME_TYPE\":\"purpur\",\"EULA\":\"TRUE\",\"ENABLE_ROLLING_LOGS\":\"true\"}"
+  },
+  {
+    "key": "rust-oxide-build",
+    "gameFamily": "rust/oxide",
+    "name": "Rust (Oxide/uMod)",
+    "sourceType": "image",
+    "imageRef": "REPLACE_ME/rust-server:latest",
+    "sourceRepoUrl": null,
+    "sourceRepoRef": null,
+    "requiresStorage": true,
+    "defaultStorageMountPath": "/data",
+    "defaultStorageMode": "rw",
+    "defaultGamePort": 28015,
+    "defaultProtocol": "udp",
+    "defaultEnvJson": "{\"RUST_SERVER_STARTUP_ARGUMENTS\":\"+server.level \\\"Procedural Map\\\" +server.seed 12345 +server.worldsize 3000 +server.maxplayers 50 +server.hostname \\\"My Rust Server\\\" +server.description \\\"Hosted on PlushServer\\\" +server.url \\\"\\\" +server.identity \\\"rust-main\\\" +rcon.port 28016 +rcon.password \\\"CHANGE_ME\\\" +rcon.web 1\"}"
+  }
+]
+
