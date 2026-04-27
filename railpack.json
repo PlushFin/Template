@@ -1,0 +1,6 @@
+{
+	"$schema": "https://schema.railpack.com",
+	"deploy": {
+		"aptPackages": ["openjdk-21-jre-headless", "curl", "jq", "ca-certificates"]
+	}
+}
