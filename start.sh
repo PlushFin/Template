@@ -7,6 +7,7 @@ cd "$(dirname "$0")"
 : "${EULA:=TRUE}"
 : "${GAME_TYPE:=paper}"
 : "${MINECRAFT_VERSION:=1.21.4}"
+: "${DATA_DIR:=/data}"
 MEM="${JAVA_MAX_MEMORY:-2G}"
 
 if [[ ! "${EULA}" =~ ^(true|TRUE|yes|1)$ ]]; then
@@ -22,6 +23,10 @@ if [[ "$g" != "paper" ]]; then
 fi
 
 echo "eula=true" >eula.txt
+
+# Persist runtime server data in mounted storage (default /data), not image layer (/app).
+mkdir -p "${DATA_DIR}"
+cd "${DATA_DIR}"
 
 # Paper API uses "STABLE" (older metadata may use "default"); pick highest build number.
 BUILDS_JSON="$(curl -fsSL "https://api.papermc.io/v2/projects/paper/versions/${MINECRAFT_VERSION}/builds")"
