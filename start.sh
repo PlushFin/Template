@@ -22,11 +22,10 @@ if [[ "$g" != "paper" ]]; then
 	exit 1
 fi
 
-echo "eula=true" >eula.txt
-
 # Persist runtime server data in mounted storage (default /data), not image layer (/app).
 mkdir -p "${DATA_DIR}"
 cd "${DATA_DIR}"
+echo "eula=true" >eula.txt
 
 # Paper API uses "STABLE" (older metadata may use "default"); pick highest build number.
 BUILDS_JSON="$(curl -fsSL "https://api.papermc.io/v2/projects/paper/versions/${MINECRAFT_VERSION}/builds")"
